@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Probabilidad por género</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+        .table-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .table thead th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .table-hover tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+	
+	.small-text-table {
+            font-size: 0.1em;  /* Reducir el tamaño del texto */
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="my-4">
+            <h1 class="text-center">Probabilidad por género</h1>
+        </header>
+        <div class="table-container">
+            {{ table_html | safe }}
+        </div>
+        <footer>
+            <p>&copy; 2024 - Proyecto de ML & NLP- Grupo 16</p>
+        </footer>
+    </div>
+</body>
+</html>
