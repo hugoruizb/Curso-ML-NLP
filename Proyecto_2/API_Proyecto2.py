@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[7]:
 
 
 # -*- coding: utf-8 -*-
@@ -68,8 +68,11 @@ def predict():
         
         res = pd.DataFrame(prediction, columns=cols)       
         res = res.loc[:, (res != 0).all(axis=0)]
+        
+        table_html = res.to_html(classes='table table-striped', index=False)
 
-        return jsonify({f'Género película {title}': res.to_json(orient="columns")})
+        #return jsonify({f'Género película {title}': res.to_json(orient="columns")})
+        return render_template('table2.html', table_html=table_html)
         
                 
     except Exception as e:
